@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="images/m-icones.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="carrosel.css">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About me</a></li>
             <li><a href="#services">Skills</a></li>
-            <li><a href="#experience">Experiences</a></li>
+            <li><a href="#projetos">Projects</a></li>
         </ul>
 
         <div class="bx bx-menu" id="menu-icon"></div>
@@ -77,10 +78,12 @@
 
         <div class="services-content">
             <div class="box">
-                <div class="s-icons">
                     <img src="images/icons8-js-96.png">
-                </div>
                 <h3>JavaScript</h3>
+                <div class="layer">
+                    <h5>JavaScript</h5>
+                    <p>Comecei estudando por essa linguagem, aprendi bastante com ela, e hoje em dia uso na maior parte dos meus projetos.</p>
+                </div>
             </div>
 
             <div class="box">
@@ -88,6 +91,10 @@
                     <img src="images/icons8-html-96.png">
                 </div>
                 <h3>HTML 5</h3>
+                <div class="layer">
+                    <h5>HTML 5</h5>
+                    <p>Conheci o HTML através de alguns cursos on-line, e hoje já conheço bastante sobre ele, juntamente com o CSS consigo dar muitas funcionalidades a ele.</p>
+                </div>
             </div>
 
             <div class="box">
@@ -95,6 +102,10 @@
                     <img src="images/icons8-css-96.png">
                 </div>
                 <h3>CSS</h3>
+                <div class="layer">
+                    <h5>CSS</h5>
+                    <p>Uma ferramenta simples, porém com grandes utilidades, gosto de usar para estilizar meus projetos e deixar eles mais atrativos.</p>
+                </div>
             </div>
 
             
@@ -104,20 +115,77 @@
                     <img src="images/icons8-database-administrator-96.png">
                 </div>
                 <h3>SQL</h3>
+                <div class="layer">
+                    <h5>SQL</h5>
+                    <p>Sobre banco dados, comecei a estudar sobre recentemente, e no momento o meu foco e conhecer mais sobre ele e seus componentes.</p>
+                </div>
             </div>
 
             <div class="box">
                 <h3>Estudando...</h3>
+            <!-- <div class="layer">
+                    <h5></h5>
+                    <p></p>
+                </div>-->
             </div>
 
             <div class="box">
                 <h3>Estudando...</h3>
+               <!--- <div class="layer">
+                    <h5></h5>
+                    <p></p>
+                </div>-->
             </div>
+            
         </div>
 
 
     </section>
+
+    <section class="projetos" id="projetos">
+        <div class="main-text">
+            <p>Portfolio</p>
+            <h2><span>Meus</span> Projetos</h2>
+        </div>
+        
+        <div class="container">
+            <button class="arrow-left control" aria-label="Previous image"><</button>
+            <button class="arrow-right control" aria-label="Next Image">></button>
+            <div class="gallery-wrapper">
+              <div class="gallery">
+                <!--       <div class="item current-item cyan"></div>
+                <div class="item deeppink"></div>
+                <div class="item turquoise"></div>
+                <div class="item darkblue"></div>
+                <div class="item purple"></div> -->
+                <div class="item current-item box__dois">
+                    <img class="imagem teuzin" src="images/teuzin.svg.jpeg">
+                </div>
+                <div class="item current-item box__dois">
+                    <h3 class="imagem">Em construção...</h3>
+                </div>
+                <div class= "item current-item box__dois" >
+                    <h3 class="imagem">Em construção...</h3>
+                </div>
+                <div class="item current-item box__dois">
+                    <h3 class="imagem">Em construção...</h3>
+                </div>
+                <div class="item current-item box__dois">
+                    <h3 class="imagem">Em construção...</h3>
+                </div>
+              </div>
+        </div>
+
+       
+    </section>
+    <section class="end">
+        <div class="last-text">
+            <p>Copyright &#169; 2023 by Mateus Sevecenco. All rights reserved.</p>
+        </div>
+    </section>
+
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
+
