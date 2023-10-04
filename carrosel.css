@@ -7,7 +7,7 @@
   .container {
     position: relative;
     padding: 15px;
-    width: 1200px;
+    width: 800px;
     margin: 0 auto;
   }
   
@@ -122,8 +122,4 @@
   .imagem:hover {
     transform: scale(1.2); 
     transition: all .30s ease;
-  }
-
-  .imagem {
-
   }
