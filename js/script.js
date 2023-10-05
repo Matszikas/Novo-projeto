@@ -1,36 +1,4 @@
-const header = document.querySelector("header");
 
-window.addEventListener ("scroll", function() {
-    header.classList.toggle ("sticky", window.scrollY > 40)
-});
-
-let menu = document.querySelector('#menu-icon');
-let navlist = document.querySelector('.navlist');
-
-menu.onclick = () => {
-    navlist.classList.toggle('open');
-    if(window.scrollY < 90){
-        header.classList.toggle ("sticky");
-    }
-    
-}
-
-window.onscroll = () => {
-    menu.classList.remove('bx-x');
-    navlist.classList.remove('open');
-}
-
-const topo = document.getElementById("top");
-
-window.addEventListener("scroll", function() {
-    topo.classList.toggle ("show-top", window.scrollY > 140)
-    topo.classList.toggle ("hide-top", window.scrollY < 140);
-});
-
-window.onload = () => {
-    topo.classList.toggle ("hide-top");
-}
-   
 const controls = document.querySelectorAll(".control");
 let currentItem = 0;
 const items = document.querySelectorAll(".item");
@@ -64,3 +32,24 @@ controls.forEach((control) => {
     items[currentItem].classList.add("current-item");
   });
 });
+
+const header = document.querySelector("header")
+const logoImg = document.querySelector("#logo-img")
+
+window.addEventListener("scroll", diminuiHeader);
+
+function diminuiHeader() {
+  if (window.pageYOffset > 0 && header.classList.contains("max")) {
+      header.classList.remove("max");
+      header.classList.add("min")};
+    }
+
+window.addEventListener("scroll", aumentaHeader);
+
+function aumentaHeader() {
+  if (window.pageYOffset == 0 && header.classList.contains("min")) {
+    header.classList.add("max");
+    header.classList.remove("min");
+ }
+}
+  

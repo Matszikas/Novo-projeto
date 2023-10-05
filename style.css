@@ -8,7 +8,10 @@
 
  
 :root {
-
+    --big-font: 5rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem;
+    --p-small-font: 0.9rem;
     --cor-saffron:#ffe200;
     --cor-branca:#fff;
     --cor-cinza:#808080;
@@ -25,11 +28,25 @@
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
+ 
+}
+
+
+.max{
+height: 75px;
+background: transparent;
+}
+
+.min{
+height: 100px;
+background: linear-gradient(90deg, rgba(83,83,85,1) 18%, rgba(216,216,218,1) 43%, rgba(204,208,222,1) 57%,var(--cor-cinza) 100%);
+
 }
 
 .navegacao {
   display:flex;
   text-decoration: none;
+ 
 }
 
 .navegacao a {
@@ -59,6 +76,7 @@ body::-webkit-scrollbar-thumb {
 
 body{
     background: var(--cor-cinza);
+    scroll-behavior: smooth;
 }
 
 header{
@@ -70,7 +88,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
+    background-color: transparent;
     padding: 22px 15%;
     border-bottom: 1px solid transparent;
     transition: all .45s ease; 
@@ -82,7 +100,7 @@ span {
     font-family: 'Bree Serif', serif;
 }
 
-.Logo{
+.Logo-img{
     color:var(--cor-branca);
     font-size: 35px;
     font-weight: 400;
@@ -101,6 +119,7 @@ span {
 
 section{
     padding: 160px 15% 120px;
+   
 }
 
 .home {
@@ -156,7 +175,7 @@ section{
 }
 
 .home-text p {
- font-size: 24px;
+ font-size: var( --p-font);
  font-weight: 400;
  font-family: 'Bree Serif', serif;
  color: var(--cor-branca);
@@ -231,7 +250,7 @@ section{
 }
 
 .about-text h2 {
-    font-size: 3rem;
+    font-size: var(--h2-font);
     line-height: 1;
     color: var(--cor-saffron);
 }
@@ -245,7 +264,7 @@ section{
 }
 
 .about-text p {
-    font-size: 1.1rem;
+    font-size: var(--p-font);
     color: var(--cor-brancar);
     line-height: 1.8;
     margin-bottom: 4rem;
@@ -266,7 +285,7 @@ section{
 } 
 
 header.sticky{
-    background: var(--cor-cinza);
+    background: #696969;
     border-bottom: 2px solid black;
     padding: 12px 15%;
     height: 10vh;
@@ -288,7 +307,7 @@ header.sticky{
 }
 
 .main-text h2{
-    font-size: 30px;
+    font-size: var(--h2-font);
     line-height: 1;
 }
 
@@ -342,9 +361,8 @@ header.sticky{
   .layer{
     width: 100%;
     height: 0%;
-    background: var(--cor-cinza);
     position: absolute;
-    border-radius: 10px;
+    border-radius: 0px;
     left: 0;
     bottom: 0;
     overflow: hidden;
@@ -360,7 +378,7 @@ header.sticky{
 
 .box:hover .layer{
     height: 100%;
-    background-color:var(--cor-cinza);
+    background-color:#d3d3d3;
 }
 
 .layer h5 {
@@ -369,7 +387,7 @@ header.sticky{
  
 }
 .layer p {
- font-size: 16px;
+ font-size: var(--p-small-font);
  color: black;
  font-weight: 200;
 }
@@ -387,6 +405,70 @@ header.sticky{
 }
 
 .last-text {
- font-size: 16px;
+ font-size: var(--p-font);
  color: black;
+}
+#top.hide-top{
+    display: none;
+}
+
+#top.show-top{
+    display: block;
+}
+
+#top i{
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 28px;
+    color: var(--cor-saffron);
+    background: var(--cor-cinza);
+}
+
+@media (max-width: 1480px){
+    header{
+        padding: 12px 2.5%;
+        transition: .1s;
+    }
+
+    header.sticky{
+        padding-top:50px;
+        transition: .1s;
+    }
+
+    section{
+        padding: 110px 3% 60px;
+    }
+    .end{
+        padding: 15px 3%;
+    }
+
+    .box{
+        width: 400px;
+    }
+}
+
+@media (max-width: 1100px){
+    :root{
+        --big-font: 4rem;
+        --h2-font: 2rem;
+        --p-font: 0.9rem;
+        transition: .1s;
+    }
+
+    .home-text h3{
+        font-size: 1.6rem;
+    }
+
+    .home{
+        height: 87vh;
+
+    }
+
+    .about-text h4{
+        font-size: var(--p-small-font)
+    }
+
+    body{
+       
+    }
 }
