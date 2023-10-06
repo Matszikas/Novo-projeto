@@ -2,7 +2,7 @@
 
 
 
-  @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Orbitron:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Orbitron:wght@400;500;600;700&display=swap');
 
 
 
@@ -45,6 +45,17 @@ background: linear-gradient(90deg, rgba(83,83,85,1) 18%, rgba(216,216,218,1) 43%
   display:flex;
   text-decoration: none;
  
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
 }
 
 .navegacao a {
@@ -103,16 +114,6 @@ span {
     font-weight: 400;
     letter-spacing: 1px;
 }
-
-#menu-icon{
-    font-size: 35px;
-    color: var(--cor-branca);
-    z-index:10001;
-    cursor:pointer;
-    margin-left: 25px;
-    display: none;
-}
-
 
 section{
     padding: 160px 15% 120px;
@@ -421,6 +422,23 @@ header.sticky{
     color: var(--cor-saffron);
     background: var(--cor-cinza);
 }
+.mobile-menu{
+    display: none;
+}
+
+.mobile-menu-icon{
+    display: none;
+    border: none;
+    
+}
+.mobile-menu-icon button {
+  background-color: transparent;
+  border: none;
+
+
+}
+
+
 
 @media (max-width: 1480px){
     header{
@@ -477,5 +495,59 @@ header.sticky{
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1.5rem;
+}
+}
+
+@media (max-width: 920px){
+
+    .about{
+        grid-template-columns: 1fr;   
+    }
+
+    .about-img{
+        display: none;
+    }
+
+    .about-text{
+        text-align: center;
+    }
+}
+
+@media (max-width: 800px){
+    .nav-bar {
+        
+    }
+    .nav-item {
+        display: none;
+    }
+    .login-button {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+        margin-right: 5rem;
+        margin-top: 2rem;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .mobile-menu .nav-item {
+        display: block;
+      padding-left:50px ;
+    }
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+    .open {
+        display: block;
+
 }
 }
