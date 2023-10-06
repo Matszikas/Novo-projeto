@@ -27,8 +27,6 @@
     font-family: 'Bree Serif', serif;
     text-decoration: none;
     list-style: none;
-    scroll-behavior: smooth;
- 
 }
 
 
@@ -76,7 +74,6 @@ body::-webkit-scrollbar-thumb {
 
 body{
     background: var(--cor-cinza);
-    scroll-behavior: smooth;
 }
 
 header{
@@ -123,6 +120,7 @@ section{
 }
 
 .home {
+
  position: relative;
  height: 100vh;
  width: 100%;
@@ -466,9 +464,18 @@ header.sticky{
 
     .about-text h4{
         font-size: var(--p-small-font)
+
     }
 
-    body{
-       
-    }
+   .about-img img {
+    margin-left: 15px;
+    height: 500px ;
+   }
+
+   .about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
 }
