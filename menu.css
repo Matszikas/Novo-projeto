@@ -1,0 +1,41 @@
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+/* Estilos para o menu de cabeçalho */
+.menu {
+    display: none;
+    background-color: transparent;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 2px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffe200;
+    font-size: 24px;
+    font-weight: 500;
+    transition: all .45s ease;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+.menu.active {
+    display: block;
+}
