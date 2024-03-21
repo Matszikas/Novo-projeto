@@ -33,32 +33,3 @@ controls.forEach((control) => {
   });
 });
 
-const header = document.querySelector("header")
-const logoImg = document.querySelector("#logo-img")
-
-window.addEventListener("scroll", diminuiHeader);
-
-function diminuiHeader() {
-  if (window.pageYOffset > 0 && header.classList.contains("max")) {
-      header.classList.remove("max");
-      header.classList.add("min")};
-    }
-
-window.addEventListener("scroll", aumentaHeader);
-
-function aumentaHeader() {
-  if (window.pageYOffset == 0 && header.classList.contains("min")) {
-    header.classList.add("max");
-    header.classList.remove("min");
- }
-}
-
-function toggleMenu() {
-  const menu = document.querySelector('.menu');
-  menu.classList.toggle('active');
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-  const menuToggle = document.querySelector('.menu-toggle');
-  menuToggle.style.display = 'block';
-});
